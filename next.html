@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="dis">
+    <input id="num">
+<br>
+<button onclick="num1(1)" >1</button>
+<button onclick="num1(2)"id="2">2</button>
+<button onclick="num1(3)"id="3">3</button>
+<br>
+<button onclick="num1(4)"id="4">4</button>
+<button onclick="num1(5)"id="5">5</button>
+<button onclick="num1(6)"id="6">6</button>
+<br>
+    <button onclick="num1(7)"id="7">7</button>
+<button onclick="num1(8)"id="8">8</button>
+<button onclick="num1(9)"id="9">9</button>
+<br>
+    <button onclick="num1(0)"id="0">0</button>
+<button onclick="oprtr('+')">+</button>
+<button onclick="oprtr('-')">-</button>
+<br>
+    <button onclick="oprtr('*')">*</button>
+    <button onclick="oprtr('/')">/</button>
+    <button onclick="result()">=</button>
+
+
+</div>
+
+
+<style>
+ #box{
+    padding-top=10px;
+    height=800px;
+    width=900px;
+    margin-top:250px;
+
+    border: 1px solid black;
+    }
+#dis{
+padding-top:5px;
+height:15px;
+width:90px;
+border:1px solid black;
+</style>
+
+<script>
+var num3='';
+var num2='';
+var o='';
+function dis(s)
+   document.getElementById("num").innerHTML = s;
+}
+function num1(a){
+if(o==='')
+{
+num3=num3+a;
+dis(num3);
+}
+else{
+num2=num2+a;
+dis(num2);
+}
+}
+function oprtr(op){
+dis(op);
+o=op;
+}
+function result()
+{
+var x=parseInt(num1);
+var y=parseInt(num2);
+if(o==='+')
+{
+dis(x+y);
+}
+else if(o==='-')
+{
+dis(x-y);
+}
+else if(o==='*')
+{
+dis(x*y);
+}
+else{
+dis(x/y);
+}
+}
+
+</script>
+</body>
+</html>
